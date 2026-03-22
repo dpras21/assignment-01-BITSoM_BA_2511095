@@ -25,3 +25,14 @@ For example:
 If we delete order_id ORD1075 which belongs to customer Vikram Singh (customer_id C005), and this is his only order, then his name, email and city details will also be removed from the database.
 Columns involved:
 order_id, customer_id, customer_name, city
+
+## Normalization Justification
+Keeping all order-related information such as customer details, product details, pricing, and sales representative data in a single flat table like orders_flat may seem simple but leads to serious data management problems. In the dataset, customer information such as name, email, and city is repeated in multiple rows whenever the same customer places multiple orders. For example, customer Neha Gupta (C006) appears in several rows with identical details. This redundancy increases storage usage and creates update anomalies. If Neha changes her email or city, the change must be made in every row. Missing even one row will result in inconsistent data.
+
+Similarly, product pricing issues can arise. The product “Pen Set” (P007) appears in multiple orders such as ORD1114, ORD1153, and ORD1132. If the unit price changes from 250 to 300, all related rows must be updated manually. This increases the risk of data inconsistency and makes maintenance difficult.
+
+There are also insert anomalies, where new customers or products cannot be added unless an order is created. For instance, adding a new product like a Printer (P009) without any order is not possible in the flat structure.
+
+Additionally, delete anomalies may lead to loss of important information. Deleting the only order of customer Vikram Singh (C005) would also remove his customer details from the database.
+
+By normalizing the schema into separate tables such as Customers, Products, Orders, Sales Representatives, and Order Details (3NF), redundancy is reduced, data integrity is improved, and the database becomes more scalable and efficient. Therefore, normalization is essential rather than over-engineering.

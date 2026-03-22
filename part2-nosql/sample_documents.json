@@ -1,1 +1,41 @@
 
+[
+{
+"product_id": "E101",
+"name": "Laptop",
+"category": "Electronics",
+"price": 55000,
+"specs": {
+"brand": "HP",
+"warranty_years": 2,
+"voltage": "220V"
+},
+"ratings": [4,5,4]
+},
+{
+"product_id": "C201",
+"name": "Denim Jacket",
+"category": "Clothing",
+"price": 2500,
+"specs": {
+"size": "M",
+"material": "Denim",
+"color": "Blue"
+},
+"ratings": [5,4]
+},
+{
+"product_id": "G301",
+"name": "Milk",
+"category": "Groceries",
+"price": 60,
+"specs": {
+"expiry_date": "2024-12-30",
+"nutrition": {
+"protein": "3g",
+"fat": "4g"
+}
+},
+"ratings": [3,4]
+}
+]

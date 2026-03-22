@@ -1,2 +1,0 @@
-# assignment-01-BITSoM_BA_2511095
-Masai Assignment

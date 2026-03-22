@@ -1,4 +1,4 @@
-/ OP1: insertMany() — insert all 3 documents
+// OP1: insertMany() — insert all 3 documents
 db.products.insertMany(require('./sample_documents.json'))
 
 // OP2: find Electronics price > 20000
